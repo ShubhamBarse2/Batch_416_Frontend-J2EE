@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome | Employee Management System</title>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+	background: linear-gradient(135deg, #74ebd5, #acb6e5);
+	min-height: 100vh;
+}
+
+/* Header */
+header {
+	background: #ffffff;
+	padding: 15px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	color: #6c63ff;
+}
+
+/* Navigation */
+nav a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+nav a:hover {
+	color: #6c63ff;
+}
+
+/* Hero Section */
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	text-align: center;
+	color: #fff;
+}
+
+.hero-content {
+	max-width: 600px;
+}
+
+.hero h2 {
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.hero p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons a {
+	text-decoration: none;
+	padding: 12px 25px;
+	margin: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: transform 0.3s, background 0.3s;
+	display: inline-block;
+}
+
+.btn-primary {
+	background: #6c63ff;
+	color: #fff;
+}
+
+.btn-secondary {
+	background: #ffffff;
+	color: #6c63ff;
+}
+
+.hero-buttons a:hover {
+	transform: translateY(-3px);
+}
+
+/* Features Section */
+.features {
+	background: #ffffff;
+	padding: 50px 40px;
+	text-align: center;
+}
+
+.features h2 {
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.feature-box {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+	flex-wrap: wrap;
+}
+
+.card {
+	background: #f5f5f5;
+	width: 250px;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card h3 {
+	color: #6c63ff;
+	margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+}
+</style>
+
+</head>
+<body>
+
+	<header>
+		<h1>EMS</h1>
+		<nav>
+			<a href="welcome.html">Home</a> <a href="Register.html">Register</a>
+			<a href="login.html">Login</a> <a href="search.html">Search</a> <a
+				href="about.html">About</a>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero-content">
+			<h2>Welcome to Employee Management System</h2>
+			<p>Manage employee details efficiently and securely with our
+				easy-to-use system.</p>
+			<div class="hero-buttons">
+				<a href="Register.html" class="btn-primary">Get Started</a> <a
+					href="login.html" class="btn-secondary">Login</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<h2>System Features</h2>
+		<div class="feature-box">
+			<div class="card">
+				<h3>Employee Registration</h3>
+				<p>Add and manage employee records easily.</p>
+			</div>
+			<div class="card">
+				<h3>Search Employees</h3>
+				<p>Quickly find employees by name or ID.</p>
+			</div>
+			<div class="card">
+				<h3>Secure Login</h3>
+				<p>Ensure data privacy with secure authentication.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>© 2025 Employee Management System | All Rights Reserved</p>
+	</footer>
+
+</body>
+</html>

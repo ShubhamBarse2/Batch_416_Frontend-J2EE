@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Form</title>
+
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(135deg, #74ebd5, #acb6e5);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	color: #333;
+}
+
+form {
+	background: #ffffff;
+	padding: 25px 30px;
+	border-radius: 10px;
+	width: 320px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+form:hover {
+	transform: scale(1.03);
+}
+
+label {
+	font-weight: bold;
+	color: #555;
+}
+
+input {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+input:focus {
+	outline: none;
+	border-color: #6c63ff;
+	box-shadow: 0 0 5px rgba(108, 99, 255, 0.6);
+}
+
+input[type="submit"] {
+	margin-top: 15px;
+	background: #6c63ff;
+	color: white;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background: #574bdb;
+}
+</style>
+
+</head>
+<body>
+
+	<form action="register" method="post" onsubmit="return validateForm()">
+		<h2>Employee Details</h2>
+
+		<label>Employee Name:</label> <input type="text" id="name"
+			name="employee_name"> <label>Employee ID:</label> <input
+			type="text" id="empid" name="employee_id"> <label>City:</label>
+		<input type="text" id="city" name="city"> <label>Mobile
+			No:</label> <input type="tel" id="mobile" name="mobile_no"> <label>Email:</label>
+		<input type="email" id="email" name="email"> <label>Password:</label>
+		<input type="password" id="password" name="password"> <input
+			type="submit" value="Submit">
+	</form>
+
+	<script>
+		function validateForm() {
+
+			// DOM access
+			let name = document.getElementById("name").value.trim();
+			let empid = document.getElementById("empid").value.trim();
+			let mobile = document.getElementById("mobile").value.trim();
+			let email = document.getElementById("email").value.trim();
+			let password = document.getElementById("password").value.trim();
+
+			// Regex patterns
+			let mobilePattern = /^[0-9]{10}$/;
+			let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+			// Validation checks
+			if (name === "") {
+				alert("Employee name is required");
+				return false;
+			}
+
+			if (empid === "") {
+				alert("Employee ID is required");
+				return false;
+			}
+
+			if (!mobilePattern.test(mobile)) {
+				alert("Enter a valid 10-digit mobile number");
+				return false;
+			}
+
+			if (!emailPattern.test(email)) {
+				alert("Enter a valid email address");
+				return false;
+			}
+
+			if (password.length < 6) {
+				alert("Password must be at least 6 characters long");
+				return false;
+			}
+
+			// Success message
+			alert("Form submitted successfully!");
+			return true; // allows form submission
+		}
+	</script>
+
+</body>
+</html>
