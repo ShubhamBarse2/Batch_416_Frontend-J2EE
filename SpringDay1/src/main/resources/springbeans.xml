@@ -4,8 +4,19 @@
 
 <beans>
 
-	<bean class="com.entity.Employee">
+	<bean class="com.entity.Employee" id="emp">
+	
+	
+		<!-- <property name="empId" value="123"></property> <property name="name" 
+			value="rahul"></property> <property name="city" value="goa"></property> -->
+
+
+		<constructor-arg index="0" value="345"></constructor-arg>
+		<constructor-arg index="1" value="swaraj"></constructor-arg>
+		<constructor-arg index="2" value="nsk"></constructor-arg>
+
 
 	</bean>
+
 
 </beans>
